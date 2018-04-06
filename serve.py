@@ -27,5 +27,6 @@ def predict():
 def home():
     # arayuzu koddan ayiralim
     return render_template("home_template.html")
+import os
 if __name__ == "__main__":
-    app.run(host="0.0.0.0")
+    app.run(host="0.0.0.0", port=os.environ.get("PORT",5000))
